@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nome');
             $table->string('tipo');
             $table->integer('pontos_de_poder');
+            $table->string('caminho_imagem');
             $table->timestamps();
         });
     }

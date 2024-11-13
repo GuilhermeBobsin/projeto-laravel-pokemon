@@ -4,6 +4,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -14,14 +15,7 @@
             </style>
         @endif
 </head>
-<body>
-    @section('navbar')
-    
-    @endsection
-
-
-    <div class="container">
-        @yield('content')
-    </div>
+<body class="bg-cover" style="background-image: url('/background.png');">
+    @yield('content')
 </body>
 </html>
