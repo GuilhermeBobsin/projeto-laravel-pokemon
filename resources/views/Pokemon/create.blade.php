@@ -36,6 +36,15 @@
                 <input class="shadow appearance-none border border-black-500 rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline " name="image" id="image" type="file" required>
             </div>
 
+            <label for="treinador_id" class="block text-gray-700 text-sm font-bold mb-1">Treinador</label>
+            <select id="treinador_id" name="treinador_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option selected>Escolha um treinador</option>
+		    @foreach($treinadors as $treinador)
+                <option value="{{ $treinador->id}}">{{ $treinador->nome }}</option>
+		    @endforeach
+</select>
+
+
             <div class="flex items-center justify-center gap-x-4">
                 <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                     Criar 

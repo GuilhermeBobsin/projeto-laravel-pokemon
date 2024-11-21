@@ -15,6 +15,7 @@ class Pokemon extends Model
         'tipo',
         'pontos_de_poder',
         'caminho_imagem',
+        'treinador_id'
     ];
 
     public function Treinador(): BelongsTo

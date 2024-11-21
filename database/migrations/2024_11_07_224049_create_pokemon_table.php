@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('tipo');
             $table->integer('pontos_de_poder');
             $table->string('caminho_imagem');
-            $table->foreignId('treinador_id')->references('id')->on('treinadores');
+            $table->foreignId('treinador_id')->references('id')->on('treinadors');
             $table->timestamps();
         });
     }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Treinador extends Model
 {
-    protected $fillble = [
+    protected $fillable = [
         'nome'
     ];
 

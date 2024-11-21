@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pokemon;
+use App\Models\Treinador;
 use Illuminate\Http\Request;
 
 class PokemonController extends Controller
@@ -15,7 +16,8 @@ class PokemonController extends Controller
 
     public function create()
     {
-        return view('pokemon.create');
+        $treinadors = Treinador::all();
+        return view('pokemon.create', compact('treinadors'));
     }
 
     public function store(Request $request)
@@ -25,7 +27,8 @@ class PokemonController extends Controller
             'nome' => $request->nome,
             'tipo' => $request->tipo,
             'pontos_de_poder' => $request->pontos_de_poder,
-            'caminho_imagem' => $caminho_imagem
+            'caminho_imagem' => $caminho_imagem,
+            'treinador_id' => $request->treinador_id
         ]);
         return redirect('pokemon')->with('success', 'O pokemon ' . $pokemon->nome . ' foi criado!');
     }
