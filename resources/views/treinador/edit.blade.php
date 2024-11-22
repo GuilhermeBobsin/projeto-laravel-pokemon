@@ -1,8 +1,4 @@
-@extends('layouts.app')
-
-@section('title', 'Editando Pokemon')
-
-@section('content')
+<x-app-layout>
     <div class="w-full max-w-sm mx-auto flex items-center justify-center min-h-screen">
         <form action="{{ url('treinador/' . $treinador->id) }}" method="POST" class="bg-gray-200 rounded px-16 pt-10 pb-10 mb-4 rounded-lg" enctype="multipart/form-data" >
             <img src="/treiner.png" alt="treinador" style="width: 230px;" >
@@ -25,4 +21,4 @@
             </div>
         </form>
     </div>
-@endsection
+    <x-app-layout>

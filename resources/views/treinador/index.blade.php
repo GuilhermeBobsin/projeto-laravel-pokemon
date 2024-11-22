@@ -1,8 +1,4 @@
-@extends('layouts.app')
-
-@section('title', 'Lista de Treinadores')
-
-@section('content')
+<x-app-layout>
     @if (session('success'))
         <div role="alert" class="w-80 mx-auto mt-5" >
             <div class="bg-green-500 text-white font-bold rounded-t px-4 py-2 flex justify-center flex justify-center">
@@ -35,4 +31,4 @@
             </div>
         @endforeach
     </div>
-@endsection
+<x-app-layout>

@@ -1,8 +1,4 @@
-@extends('layouts.app')
-
-@section('title', 'Novo Pokemon')
-
-@section('content')
+<x-app-layout>
     <div class="w-full max-w-sm mx-auto flex items-center justify-center min-h-screen"> 
         <form action="{{ url('pokemon') }}" method="POST" class="bg-gray-200 rounded px-16 pt-10 pb-10 mb-4 rounded-lg" enctype="multipart/form-data" >
             <img src="/pokebola.png" alt="pokebola" style="width: 230px;" class="mx-auto" >
@@ -37,7 +33,7 @@
             </div>
 
             <label for="treinador_id" class="block text-gray-700 text-sm font-bold mb-1">Treinador</label>
-            <select id="treinador_id" name="treinador_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <select id="treinador_id" name="treinador_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
             <option selected>Escolha um treinador</option>
 		    @foreach($treinadors as $treinador)
                 <option value="{{ $treinador->id}}">{{ $treinador->nome }}</option>
@@ -55,4 +51,4 @@
             </div>
         </form>
 </div>
-@endsection
+<x-app-layout>
